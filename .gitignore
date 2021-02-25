@@ -1,5 +1,6 @@
+
 /*
-.DS_Store
+!/.*
+*/
 !.leetcode/
-!/.gitignore
-!/.gitattributes
+.DS_Store
