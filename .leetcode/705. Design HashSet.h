@@ -2,7 +2,7 @@ class MyHashSet
 {
     static constexpr int Prime = 24593;
     static constexpr int NullFlag = -1;
-    std::array<int, Prime> arr{};
+    std::array<int, Prime> arr;
 
     std::array<int, Prime>::iterator find(std::array<int, Prime>::iterator first,
                                           std::function<bool(int)> pFunction)
