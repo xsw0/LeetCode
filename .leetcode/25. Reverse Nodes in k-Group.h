@@ -10,24 +10,42 @@
  */
 class Solution
 {
+    inline ListNode *kth(ListNode *head, int k)
+    {
+        return k > 0 && head ? kth(head->next, k - 1) : head;
+    };
+
+    inline ListNode *reverse(ListNode *head)
+    {
+        ListNode *tail = nullptr;
+        while (head)
+        {
+            auto next = head->next;
+            head->next = tail;
+            tail = head;
+            head = next;
+        }
+        return tail;
+    };
+
  public:
     ListNode *reverseKGroup(ListNode *head, int k)
     {
-        if (k == 1) return head;
+        ListNode _preHead{ 0, head };
+        ListNode *preHead = &_preHead;
+        auto preFirst = preHead;
 
-        ListNode node;
-        node.next = head;
-        auto pre = &node;
-        while (true)
+        auto tail = kth(preFirst, k);
+        while (tail)
         {
-            auto p = pre;
-            for (int i = 0; i < k; ++i)
-            {
-                auto first = p->next;
-                auto second = first->third;
-                p->next = third;
-            }
+            auto next = tail->next;
+            tail->next = nullptr;
+            auto first = preFirst->next;
+            preFirst->next = reverse(first);
+            first->next = next;
+            preFirst = first;
+            tail = kth(preFirst, k);
         }
-        return node.next;
+        return preHead->next;
     }
 };
