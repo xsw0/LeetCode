@@ -1,18 +1,16 @@
 #include "bits/stdc++.h"
 #include "ListNode.h"
+#include "to_string.h"
 
 using namespace std;
 
-#include ".leetcode/25. Reverse Nodes in k-Group.h"
+#include ".leetcode/30. Substring with Concatenation of All Words.h"
 
 int main()
 {
-    list<int> a;
-    vector<int> v{ 1, 2, 3, 4, 5 };
-    ListNode *ln = ListNode::pListNode(v.cbegin(), v.cend());
     Solution solution;
-    ln = solution.reverseKGroup(ln, 2);
-    std::cout << ln << std::endl;
-    std::cout << "Hello, World!" << std::endl;
+    vector<string> v{ "foo", "bar" };
+    auto result = solution.findSubstring("barfoothefoobarman", v);
+    cout << result << endl;
     return 0;
 }
