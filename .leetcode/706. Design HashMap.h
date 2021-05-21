@@ -21,7 +21,7 @@ class MyHashMap
 
     std::array<value_type, Prime>::iterator
     find(std::array<value_type, Prime>::iterator first,
-         std::function<bool(value_type)> pFunction)
+         const std::function<bool(value_type)> &pFunction)
     {
         auto it = first;
         for (; it < arr.end(); ++it)
@@ -74,7 +74,7 @@ class MyHashMap
         return result;
     }
 
- public:
+public:
     /** Initialize your data structure here. */
     MyHashMap()
     {
