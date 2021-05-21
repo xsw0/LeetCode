@@ -1,7 +1,7 @@
 class Solution
 {
 public:
-    vector <vector<int>> insert(vector <vector<int>> &intervals, vector<int> &newInterval)
+    vector<vector<int>> insert(vector<vector<int>> &intervals, vector<int> &newInterval)
     {
         auto l = lower_bound(
                 intervals.begin(),
@@ -18,7 +18,7 @@ public:
         }
 
         auto r = upper_bound(
-                intervals.begin(),
+                l,
                 intervals.end(),
                 newInterval.back(),
                 [](int value, const vector<int> &element) {
@@ -31,12 +31,23 @@ public:
             return intervals;
         }
 
-        if (newInterval.front() < l->front()) l->front() = newInterval.front();
+        if (distance(l, r) * 32 < newInterval.size())
+        {
+            if (newInterval.front() < l->front()) l->front() = newInterval.front();
 
-        l->back() = prev(r)->back();
-        if (newInterval.back() > l->back()) l->back() = newInterval.back();
+            l->back() = prev(r)->back();
+            if (newInterval.back() > l->back()) l->back() = newInterval.back();
 
-        intervals.erase(next(l), r);
-        return intervals;
+            intervals.erase(next(l), r);
+            return intervals;
+        }
+
+        vector<vector<int>> result;
+        result.reserve(intervals.size() + l - r + 1);
+
+        std::move(intervals.begin(), l, back_inserter(result));
+        result.push_back({ min(l->front(), newInterval.front()), max(prev(r)->back(), newInterval.back()) });
+        std::move(r, intervals.end(), back_inserter(result));
+        return result;
     }
 };
