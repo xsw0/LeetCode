@@ -10,7 +10,7 @@
  */
 class Solution
 {
- public:
+public:
     ListNode *removeNthFromEnd(ListNode *head, int n)
     {
         ListNode node;

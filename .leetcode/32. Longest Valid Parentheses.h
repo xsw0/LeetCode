@@ -1,6 +1,6 @@
 class Solution
 {
- public:
+public:
     int longestValidParentheses(string s)
     {
         stack<int> st;

@@ -1,6 +1,6 @@
 class Solution
 {
- public:
+public:
     int jump(vector<int> &nums)
     {
         int count = 0;

@@ -15,15 +15,15 @@ class Solution
         }
         return result;
     }
- public:
-    vector<vector<string>> groupAnagrams(vector<string> &strs)
+public:
+    vector <vector<string>> groupAnagrams(vector <string> &strs)
     {
-        unordered_map<string, vector<string>> um;
+        unordered_map <string, vector<string>> um;
         for (const auto &s :strs)
         {
             um[hash(s)].push_back(s);
         }
-        vector<vector<string>> result;
+        vector <vector<string>> result;
         result.reserve(um.size());
         for (const auto &p : um)
         {

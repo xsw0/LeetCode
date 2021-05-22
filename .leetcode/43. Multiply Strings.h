@@ -1,18 +1,18 @@
 class Solution
 {
- public:
+public:
     string multiply(string num1, string num2)
     {
         string product(num1.size() + num2.size(), '0');
         function<void(size_t, int)> carry =
-            [&](size_t index, int value) {
-                int sum = product[index] - '0' + value;
-                product[index] = '0' + sum % 10;
-                if (sum >= 10)
-                {
-                    carry(index + 1, sum / 10);
-                }
-            };
+                [&](size_t index, int value) {
+                    int sum = product[index] - '0' + value;
+                    product[index] = '0' + sum % 10;
+                    if (sum >= 10)
+                    {
+                        carry(index + 1, sum / 10);
+                    }
+                };
         for (size_t i = 0; i < num1.size(); ++i)
         {
             if (num1[i] != '0')

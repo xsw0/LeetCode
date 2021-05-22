@@ -1,6 +1,6 @@
 class Solution
 {
- public:
+public:
     bool isMatch(string s, string p)
     {
         size_t i = 0;

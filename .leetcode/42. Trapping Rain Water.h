@@ -1,6 +1,6 @@
 class Solution
 {
- public:
+public:
     int trap(vector<int> &height)
     {
         if (height.empty()) return 0;

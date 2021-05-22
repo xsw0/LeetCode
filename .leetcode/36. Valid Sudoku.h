@@ -1,7 +1,7 @@
 class Solution
 {
- public:
-    bool isValidSudoku(vector<vector<char>> &board)
+public:
+    bool isValidSudoku(vector <vector<char>> &board)
     {
         array<array<bool, 9>, 9> rows{}, cols{}, boxes{};
 

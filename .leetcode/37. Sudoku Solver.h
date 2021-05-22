@@ -1,6 +1,6 @@
 class Solution
 {
-    static bool isValid(vector<vector<char>> &board, size_t row, size_t col, char c)
+    static bool isValid(vector <vector<char>> &board, size_t row, size_t col, char c)
     {
         for (size_t i = 0; i < 9; ++i)
         {
@@ -11,7 +11,7 @@ class Solution
         return true;
     }
 
-    vector<vector<char>> *board = nullptr;
+    vector <vector<char>> *board = nullptr;
 
     bool solve(size_t index = 0)
     {
@@ -38,8 +38,8 @@ class Solution
             return solve(index + 1);
         }
     }
- public:
-    void solveSudoku(vector<vector<char>> &board)
+public:
+    void solveSudoku(vector <vector<char>> &board)
     {
         this->board = &board;
         solve();

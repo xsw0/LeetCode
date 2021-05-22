@@ -7,9 +7,9 @@ class Solution
         Token(char c, bool repeat) : c(c), repeat(repeat) {};
     };
 
-    static vector<Token> parse(const string& regular)
+    static vector <Token> parse(const string &regular)
     {
-        vector<Token> Tokens;
+        vector <Token> Tokens;
         {
             size_t i = 0;
             Tokens.reserve(regular.size());
@@ -92,7 +92,7 @@ class Solution
                           TokensLast);
     }
 
- public:
+public:
     bool isMatch(string s, string p)
     {
         auto tokens = parse(p);

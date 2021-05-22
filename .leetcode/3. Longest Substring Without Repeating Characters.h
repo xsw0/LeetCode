@@ -1,6 +1,6 @@
 class Solution
 {
- public:
+public:
     int lengthOfLongestSubstring(string s)
     {
         array<int, 127> index;

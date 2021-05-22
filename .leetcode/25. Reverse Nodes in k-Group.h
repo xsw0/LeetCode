@@ -28,7 +28,7 @@ class Solution
         return tail;
     };
 
- public:
+public:
     ListNode *reverseKGroup(ListNode *head, int k)
     {
         ListNode _preHead{ 0, head };

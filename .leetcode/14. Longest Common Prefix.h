@@ -1,11 +1,11 @@
 class Solution
 {
- public:
-    string longestCommonPrefix(vector<string>& strs)
+public:
+    string longestCommonPrefix(vector <string> &strs)
     {
         if (strs.empty()) return "";
         size_t size = numeric_limits<size_t>::max();
-        for (const auto& s : strs)
+        for (const auto &s : strs)
         {
             size = std::min(size, s.size());
         }

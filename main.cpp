@@ -5,22 +5,21 @@
 #include "to_string.h"
 
 using namespace std;
-
-#include ".leetcode/57. Insert Interval.h"
+//
+//#include ".leetcode/1. Two Sum.h"
+//#include ".leetcode/46. Permutations.h"
 
 using return_t = int;
 
 int main()
 {
-    Solution solution;
-
+//    Solution solution;
     auto arg1 = vector<vector<int>>{
-        { 1, 5 }
+            { 1, 2, 3 },
+            { 4, 5, 6 },
     };
-    auto arg2 = vector<int>{ 5, 7 };
-
-    cout <<
-         to_string(solution.insert(arg1, arg2))
-         << endl;
+//    cout <<
+//         solution.isNumber("2e0")
+//         << endl;
     return 0;
 }

@@ -10,7 +10,7 @@
  */
 class Solution
 {
- public:
+public:
     ListNode *swapPairs(ListNode *head)
     {
         ListNode node;

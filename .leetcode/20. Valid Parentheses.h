@@ -1,6 +1,6 @@
 class Solution
 {
- public:
+public:
     bool isValid(string s)
     {
         stack<char, list<char>> st;
@@ -8,19 +8,19 @@ class Solution
         {
             switch (c)
             {
-            case '{':
-                st.push('}');
-                break;
-            case '[':
-                st.push(']');
-                break;
-            case '(':
-                st.push(')');
-                break;
-            default:
-                if (st.empty() || st.top() != c) return false;
-                st.pop();
-                break;
+                case '{':
+                    st.push('}');
+                    break;
+                case '[':
+                    st.push(']');
+                    break;
+                case '(':
+                    st.push(')');
+                    break;
+                default:
+                    if (st.empty() || st.top() != c) return false;
+                    st.pop();
+                    break;
             }
         }
         return st.empty();

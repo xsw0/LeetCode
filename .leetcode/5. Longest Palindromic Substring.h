@@ -1,7 +1,7 @@
 class Solution
 {
-    static pair<string::const_iterator,
-                string::const_iterator>
+    static pair <string::const_iterator,
+    string::const_iterator>
     longestPalindrome(string::const_iterator first,
                       string::const_iterator last)
     {
@@ -19,7 +19,7 @@ class Solution
         return { first, last };
     }
 
- public:
+public:
     string longestPalindrome(string s)
     {
         if (s.size() < 2) { return s; }
@@ -30,7 +30,7 @@ class Solution
         {
             if (distance(maximum.first, maximum.second) + i >= s.size()) { break; }
 
-            pair<string::const_iterator, string::const_iterator> p;
+            pair <string::const_iterator, string::const_iterator> p;
 
             p = longestPalindrome(s.cbegin() + i, s.cend());
             if (distance(p.first, p.second) >

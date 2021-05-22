@@ -1,6 +1,6 @@
 class Solution
 {
- public:
+public:
     string convert(string s, int numRows)
     {
         if (numRows == 1 || s.size() <= numRows) { return s; }

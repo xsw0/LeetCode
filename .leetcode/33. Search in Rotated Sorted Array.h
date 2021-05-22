@@ -1,6 +1,6 @@
 class Solution
 {
- public:
+public:
     int search(vector<int> &nums, int target)
     {
         if (nums.empty()) return -1;

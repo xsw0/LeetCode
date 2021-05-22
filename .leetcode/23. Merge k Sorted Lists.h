@@ -10,7 +10,7 @@
  */
 class Solution
 {
- public:
+public:
     ListNode *mergeKLists(vector<ListNode *> &lists)
     {
         vector<int> v;

@@ -1,6 +1,6 @@
 class Solution
 {
- public:
+public:
     int myAtoi(string s)
     {
         size_t i = 0;
@@ -11,10 +11,10 @@ class Solution
         {
             switch (s[i])
             {
-            case '-':
-                sign = 1;
-            case '+':
-                ++i;
+                case '-':
+                    sign = 1;
+                case '+':
+                    ++i;
             }
         }
 

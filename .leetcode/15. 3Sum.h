@@ -1,11 +1,11 @@
 class Solution
 {
- public:
-    vector<vector<int>> threeSum(vector<int>& nums)
+public:
+    vector <vector<int>> threeSum(vector<int> &nums)
     {
         if (nums.size() < 3) return {};
         sort(nums.begin(), nums.end());
-        vector<vector<int>> result;
+        vector <vector<int>> result;
         result.reserve(nums.size());
         for (auto it = nums.cbegin(); it != nums.cend(); ++it)
         {

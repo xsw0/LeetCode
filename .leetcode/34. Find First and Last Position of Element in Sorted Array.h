@@ -1,6 +1,6 @@
 class Solution
 {
- public:
+public:
     vector<int> searchRange(vector<int> &nums, int target)
     {
         auto l = nums.cbegin();
@@ -20,12 +20,12 @@ class Solution
             else
             {
                 return {
-                    static_cast<int>(
-                        distance(nums.cbegin(), lower_bound(l, mid, target))
-                    ),
-                    static_cast<int>(
-                        distance(nums.cbegin(), upper_bound(mid, r, target))
-                    ) - 1
+                        static_cast<int>(
+                                distance(nums.cbegin(), lower_bound(l, mid, target))
+                        ),
+                        static_cast<int>(
+                                distance(nums.cbegin(), upper_bound(mid, r, target))
+                        ) - 1
                 };
             }
         }

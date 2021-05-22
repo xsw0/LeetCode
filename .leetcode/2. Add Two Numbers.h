@@ -10,11 +10,11 @@
  */
 class Solution
 {
- public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2)
+public:
+    ListNode *addTwoNumbers(ListNode *l1, ListNode *l2)
     {
         ListNode preHead;
-        ListNode* p = &preHead;
+        ListNode *p = &preHead;
         int carry = 0;
         while (l1 || l2 || carry)
         {

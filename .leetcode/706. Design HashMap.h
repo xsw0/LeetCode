@@ -17,7 +17,7 @@ class MyHashMap
         return lhs == rhs;
     }
 
-    std::array<value_type, Prime> arr;
+    std::array <value_type, Prime> arr;
 
     std::array<value_type, Prime>::iterator
     find(std::array<value_type, Prime>::iterator first,
@@ -42,10 +42,10 @@ class MyHashMap
         return arr.end();
     }
 
-    std::list<value_type> takeOut(std::array<value_type, Prime>::iterator first,
-                                  std::array<value_type, Prime>::iterator last)
+    std::list <value_type> takeOut(std::array<value_type, Prime>::iterator first,
+                                   std::array<value_type, Prime>::iterator last)
     {
-        std::list<value_type> result;
+        std::list <value_type> result;
         if (first < last)
         {
             while (first != last)
