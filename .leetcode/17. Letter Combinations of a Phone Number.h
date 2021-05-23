@@ -5,14 +5,14 @@ public:
     {
         if (digits.empty()) return {};
         static const array<vector<char>, 8> table = {
-                vector < char > { 'a', 'b', 'c' },
-                vector < char > { 'd', 'e', 'f' },
-                vector < char > { 'g', 'h', 'i' },
-                vector < char > { 'j', 'k', 'l' },
-                vector < char > { 'm', 'n', 'o' },
-                vector < char > { 'p', 'q', 'r', 's' },
-                vector < char > { 't', 'u', 'v' },
-                vector < char > { 'w', 'x', 'y', 'z' }
+            vector < char > { 'a', 'b', 'c' },
+            vector < char > { 'd', 'e', 'f' },
+            vector < char > { 'g', 'h', 'i' },
+            vector < char > { 'j', 'k', 'l' },
+            vector < char > { 'm', 'n', 'o' },
+            vector < char > { 'p', 'q', 'r', 's' },
+            vector < char > { 't', 'u', 'v' },
+            vector < char > { 'w', 'x', 'y', 'z' }
         };
         vector <size_t> index;
         index.reserve(digits.size());

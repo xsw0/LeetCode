@@ -7,7 +7,7 @@
 
 class ListNode
 {
- public:
+public:
     int val;
     ListNode *next;
     explicit ListNode(int x = 0, ListNode *next = nullptr) : val(x), next(next) {}
@@ -28,7 +28,7 @@ class ListNode
 
 inline std::ostream &operator<<(std::ostream &os, ListNode *ld)
 {
-    assert(os);
+    assert(ld);
     os << ld->val;
     if (ld->next) os << ' ' << ld->next;
     return os;

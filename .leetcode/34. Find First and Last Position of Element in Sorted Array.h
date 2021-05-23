@@ -20,12 +20,12 @@ public:
             else
             {
                 return {
-                        static_cast<int>(
-                                distance(nums.cbegin(), lower_bound(l, mid, target))
-                        ),
-                        static_cast<int>(
-                                distance(nums.cbegin(), upper_bound(mid, r, target))
-                        ) - 1
+                    static_cast<int>(
+                        distance(nums.cbegin(), lower_bound(l, mid, target))
+                    ),
+                    static_cast<int>(
+                        distance(nums.cbegin(), upper_bound(mid, r, target))
+                    ) - 1
                 };
             }
         }

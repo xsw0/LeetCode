@@ -4,12 +4,12 @@ public:
     vector <vector<int>> insert(vector <vector<int>> &intervals, vector<int> &newInterval)
     {
         auto l = lower_bound(
-                intervals.begin(),
-                intervals.end(),
-                newInterval.front(),
-                [](const vector<int> &element, int value) {
-                    return element.back() < value;
-                });
+            intervals.begin(),
+            intervals.end(),
+            newInterval.front(),
+            [](const vector<int> &element, int value) {
+                return element.back() < value;
+            });
 
         if (l == intervals.end())
         {
@@ -18,12 +18,12 @@ public:
         }
 
         auto r = upper_bound(
-                l,
-                intervals.end(),
-                newInterval.back(),
-                [](int value, const vector<int> &element) {
-                    return value < element.front();
-                });
+            l,
+            intervals.end(),
+            newInterval.back(),
+            [](int value, const vector<int> &element) {
+                return value < element.front();
+            });
 
         if (l == r)
         {

@@ -5,8 +5,8 @@ class MyHashSet
     std::array<int, Prime> arr;
 
     std::array<int, Prime>::iterator find(
-            std::array<int, Prime>::iterator first,
-            std::function<bool(int)> pFunction)
+        std::array<int, Prime>::iterator first,
+        std::function<bool(int)> pFunction)
     {
         auto it = first;
         for (; it < arr.end(); ++it)
@@ -28,8 +28,8 @@ class MyHashSet
     }
 
     std::list<int> takeOut(
-            std::array<int, Prime>::iterator first,
-            std::array<int, Prime>::iterator last)
+        std::array<int, Prime>::iterator first,
+        std::array<int, Prime>::iterator last)
     {
         std::list<int> result;
         if (first < last)
