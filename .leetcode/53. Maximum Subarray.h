@@ -4,10 +4,10 @@ public:
     int maxSubArray(vector<int> &nums)
     {
         int sum = 0;
-        int max = INT_MIN;
-        for (auto e : nums)
+        int max = numeric_limits<int>::min();
+        for (auto n : nums)
         {
-            sum += e;
+            sum += n;
             max = std::max(max, sum);
             sum = std::max(0, sum);
         }

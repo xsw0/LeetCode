@@ -3,37 +3,38 @@ class Solution
 public:
     int trap(vector<int> &height)
     {
-        if (height.empty()) return 0;
-        auto highest = max_element(height.cbegin(), height.cend());
-
-        int tot = 0;
-        int bound;
-
-        bound = 0;
-        for (auto it = height.cbegin(); it != highest; ++it)
+        auto l = height.cbegin();
+        auto r = height.cend();
+        int lMax = 0;
+        int rMax = 0;
+        int count = 0;
+        while (l != r)
         {
-            if (*it < bound)
+            if (lMax < rMax)
             {
-                tot += bound - *it;
+                if (*l > lMax)
+                {
+                    lMax = *l;
+                }
+                else
+                {
+                    count += lMax - *l;
+                }
+                ++l;
             }
             else
             {
-                bound = *it;
+                --r;
+                if (*r > rMax)
+                {
+                    rMax = *r;
+                }
+                else
+                {
+                    count += rMax - *r;
+                }
             }
         }
-
-        bound = 0;
-        for (auto it = prev(height.cend()); it != highest; --it)
-        {
-            if (*it < bound)
-            {
-                tot += bound - *it;
-            }
-            else
-            {
-                bound = *it;
-            }
-        }
-        return tot;
+        return count;
     }
 };
