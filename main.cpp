@@ -5,7 +5,7 @@
 
 using namespace std;
 
-#include ".leetcode/76. Minimum Window Substring.h"
+#include ".leetcode/77. Combinations.h"
 
 int main()
 {
@@ -16,12 +16,12 @@ int main()
         { 1, 1 }
     };
     cout <<
-         //         to_string(
-         solution.minWindow(
-             "ADOBECODEBANC",
-             "ABC"
+         to_string(
+             solution.combine(
+                 4,
+                 2
+             )
          )
-         //         )
          << endl;
     return 0;
 }
