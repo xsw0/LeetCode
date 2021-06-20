@@ -3,26 +3,26 @@ class Solution
 public:
     int mySqrt(int x)
     {
-        int minR = 0;
-        int max = min(x, 46340);
-        auto square = [](const int i) {
-            return i * i;
-        };
-        while (minR < max)
+        int lower = 0;
+        constexpr static int ROUND_DOWN_SQRT_OF_MAX_INT = 46340;
+        int upper = min(x, ROUND_DOWN_SQRT_OF_MAX_INT);
+        while (lower != upper)
         {
-            if (auto avg = (minR + max + 1) / 2, i = square(avg); i == x)
+            auto avg = (lower + upper + 1) / 2;
+            auto square = avg * avg;
+            if (square == x)
             {
                 return avg;
             }
-            else if (i < x)
+            else if (square < x)
             {
-                minR = avg;
+                lower = avg;
             }
             else
             {
-                max = avg - 1;
+                upper = avg - 1;
             }
         }
-        return max;
+        return lower;
     }
 };
