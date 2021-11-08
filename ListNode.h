@@ -9,11 +9,11 @@ class ListNode
 {
 public:
     int val;
-    ListNode *next;
-    explicit ListNode(int x = 0, ListNode *next = nullptr) : val(x), next(next) {}
+    ListNode* next;
+    explicit ListNode(int x = 0, ListNode* next = nullptr) : val(x), next(next) {}
 
     template<typename It>
-    static ListNode *pListNode(It first, It last)
+    static ListNode* pListNode(It first, It last)
     {
         if (first == last)
         {
@@ -26,7 +26,7 @@ public:
     }
 };
 
-inline std::ostream &operator<<(std::ostream &os, ListNode *ld)
+inline std::ostream& operator<<(std::ostream& os, ListNode* ld)
 {
     assert(ld);
     os << ld->val;

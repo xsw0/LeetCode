@@ -16,7 +16,7 @@ public:
         };
         vector <size_t> index;
         index.reserve(digits.size());
-        for (const char c : digits)
+        for (const char c: digits)
         {
             index.push_back(c - '2');
         }

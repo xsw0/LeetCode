@@ -30,8 +30,11 @@
 
 // C
 #ifndef _GLIBCXX_NO_ASSERT
-  #include <cassert>
+
+#include <cassert>
+
 #endif
+
 #include <cctype>
 #include <cerrno>
 #include <cfloat>
@@ -49,17 +52,21 @@
 #include <ctime>
 
 #if __cplusplus >= 201103L
-  #include <ccomplex>
-  #include <cfenv>
-  #include <cinttypes>
-  #if __cplusplus < 201703L
-    #include <cstdalign>
-  #endif
-  #include <cstdbool>
-  #include <cstdint>
-  #include <ctgmath>
-  #include <cwchar>
-  #include <cwctype>
+
+#include <ccomplex>
+#include <cfenv>
+#include <cinttypes>
+
+#if __cplusplus < 201703L
+#include <cstdalign>
+#endif
+
+#include <cstdbool>
+#include <cstdint>
+#include <ctgmath>
+#include <cwchar>
+#include <cwctype>
+
 #endif
 
 // C++
@@ -97,23 +104,25 @@
 #include <vector>
 
 #if __cplusplus >= 201103L
-  #include <array>
-  #include <atomic>
-  #include <chrono>
-  #include <condition_variable>
-  #include <forward_list>
-  #include <future>
-  #include <initializer_list>
-  #include <mutex>
-  #include <random>
-  #include <ratio>
-  #include <regex>
-  #include <scoped_allocator>
-  #include <system_error>
-  #include <thread>
-  #include <tuple>
-  #include <typeindex>
-  #include <type_traits>
-  #include <unordered_map>
-  #include <unordered_set>
+
+#include <array>
+#include <atomic>
+#include <chrono>
+#include <condition_variable>
+#include <forward_list>
+#include <future>
+#include <initializer_list>
+#include <mutex>
+#include <random>
+#include <ratio>
+#include <regex>
+#include <scoped_allocator>
+#include <system_error>
+#include <thread>
+#include <tuple>
+#include <typeindex>
+#include <type_traits>
+#include <unordered_map>
+#include <unordered_set>
+
 #endif

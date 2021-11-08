@@ -1,7 +1,7 @@
 class Solution
 {
 public:
-    int removeElement(vector<int> &nums, int val)
+    int removeElement(vector<int>& nums, int val)
     {
         auto l = nums.begin();
         auto r = nums.rbegin();

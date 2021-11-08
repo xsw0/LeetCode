@@ -1,7 +1,7 @@
 class Solution
 {
 public:
-    bool canJump(vector<int> &nums)
+    bool canJump(vector<int>& nums)
     {
         int i = 0;
         int bound = 1;

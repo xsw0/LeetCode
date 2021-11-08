@@ -5,7 +5,8 @@ public:
     {
         vector <string> result;
         std::function<void(string, int, int)> f =
-            [&](string s, int l, int r) {
+            [&](string s, int l, int r)
+            {
                 if (l == 0 && r == 0)
                 {
                     result.push_back(s);

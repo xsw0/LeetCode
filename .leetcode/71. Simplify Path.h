@@ -3,15 +3,16 @@ class Solution
 public:
     string simplifyPath(string path)
     {
-        const char *start = path.c_str();
-        const char *current = path.c_str();
-        auto entry = [&]() {
+        const char* start = path.c_str();
+        const char* current = path.c_str();
+        auto entry = [&]()
+        {
             while (*current == '/') ++current;
             start = current;
             while (*current != '\0' && *current != '/') ++current;
             return start != current;
         };
-        list<string_view> l;
+        list <string_view> l;
         while (entry())
         {
             size_t size = current - start;
@@ -30,7 +31,7 @@ public:
         }
         string result;
         result.reserve(path.size());
-        for (auto &view : l)
+        for (auto& view: l)
         {
             result.push_back('/');
             result += view;

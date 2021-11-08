@@ -1,7 +1,7 @@
 class Solution
 {
 public:
-    int firstMissingPositive(vector<int> &nums)
+    int firstMissingPositive(vector<int>& nums)
     {
         for (int i = 0; i < nums.size(); ++i)
         {

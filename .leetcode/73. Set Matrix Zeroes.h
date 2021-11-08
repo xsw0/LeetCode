@@ -1,10 +1,11 @@
 class Solution
 {
 public:
-    void setZeroes(vector<vector<int>> &matrix)
+    void setZeroes(vector <vector<int>>& matrix)
     {
         bool col0 = find_if(matrix.cbegin(), matrix.cend(),
-                            [](const vector<int> &v) {
+                            [](const vector<int>& v)
+                            {
                                 return v.front() == 0;
                             }) != matrix.cend();
         if (find(matrix.front().cbegin(),
@@ -34,7 +35,7 @@ public:
         {
             if (matrix.front()[col] == 0)
             {
-                for (auto &row : matrix)
+                for (auto& row: matrix)
                 {
                     row[col] = 0;
                 }
@@ -44,7 +45,7 @@ public:
         if (matrix.front().front() == 0) fill(matrix.front().begin(), matrix.front().end(), 0);
         if (col0)
         {
-            for (auto &row : matrix)
+            for (auto& row: matrix)
             {
                 row.front() = 0;
             }

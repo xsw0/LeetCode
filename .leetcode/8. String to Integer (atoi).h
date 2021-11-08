@@ -11,10 +11,10 @@ public:
         {
             switch (s[i])
             {
-                case '-':
-                    sign = 1;
-                case '+':
-                    ++i;
+            case '-':
+                sign = 1;
+            case '+':
+                ++i;
             }
         }
 

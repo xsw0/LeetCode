@@ -1,7 +1,7 @@
 class Solution
 {
 public:
-    int jump(vector<int> &nums)
+    int jump(vector<int>& nums)
     {
         int count = 0;
         int end = 0;

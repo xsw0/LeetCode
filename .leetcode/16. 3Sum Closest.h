@@ -1,7 +1,7 @@
 class Solution
 {
 public:
-    int threeSumClosest(vector<int> &nums, int target)
+    int threeSumClosest(vector<int>& nums, int target)
     {
         sort(nums.begin(), nums.end());
         int closest = numeric_limits<int>::max();

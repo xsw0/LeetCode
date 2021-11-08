@@ -5,7 +5,7 @@ public:
     {
         vector <vector<int>> result = {{}};
         size_t size = 1;
-        for (auto n : nums)
+        for (auto n: nums)
         {
             for (size_t i = 0; i < size; i++)
             {

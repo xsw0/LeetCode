@@ -11,18 +11,18 @@
 class Solution
 {
 public:
-    ListNode *removeNthFromEnd(ListNode *head, int n)
+    ListNode* removeNthFromEnd(ListNode* head, int n)
     {
         ListNode node;
         node.next = head;
-        ListNode *preHead = &node;
+        ListNode* preHead = &node;
         auto last = head;
         while (n != 1)
         {
             last = last->next;
             --n;
         }
-        ListNode *preNth = &node;
+        ListNode* preNth = &node;
         while (last->next)
         {
             last = last->next;

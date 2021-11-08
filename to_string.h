@@ -32,17 +32,17 @@ namespace TO_STRING
     extern std::string arrayNewline;
     extern std::string arrayIndent;
 
-    template <template <typename...> class>
+    template<template<typename...> class>
     int prefix;
-    template <template <typename...> class>
+    template<template<typename...> class>
     int suffix;
-    template <template <typename...> class>
+    template<template<typename...> class>
     int separator;
-    template <template <typename...> class>
+    template<template<typename...> class>
     int space;
-    template <template <typename...> class>
+    template<template<typename...> class>
     int newline;
-    template <template <typename...> class>
+    template<template<typename...> class>
     int indent;
 
 #define DECLARE(container)                   \
@@ -78,7 +78,7 @@ namespace TO_STRING
 #undef DECLARE
 } // namespace TO_STRING
 
-inline std::string operator*(const std::string &s, size_t times)
+inline std::string operator*(const std::string& s, size_t times)
 {
     std::string result;
     result.reserve(s.size() * times);
@@ -89,59 +89,59 @@ inline std::string operator*(const std::string &s, size_t times)
     return result;
 }
 
-inline std::string operator*(size_t times, const std::string &s)
+inline std::string operator*(size_t times, const std::string& s)
 {
     return s * times;
 }
 
-inline std::string tolower(const std::string &s)
+inline std::string tolower(const std::string& s)
 {
     std::string result(s);
-    for (auto &x : result)
+    for (auto& x: result)
     {
         x = std::tolower(x);
     }
     return result;
 }
 
-inline std::string toupper(const std::string &s)
+inline std::string toupper(const std::string& s)
 {
     std::string result(s);
-    for (auto &x : result)
+    for (auto& x: result)
     {
         x = std::toupper(x);
     }
     return result;
 }
 
-inline std::string to_string(const std::string &s,
-                             std::string &indents = TO_STRING::emptyString)
+inline std::string to_string(const std::string& s,
+                             std::string& indents = TO_STRING::emptyString)
 {
     return indents + std::string(TO_STRING::stringPrefix) + s + std::string(TO_STRING::stringSuffix);
 }
 
-template <typename T>
-std::string to_string(const T &x,
-                      std::string &indents = TO_STRING::emptyString);
+template<typename T>
+std::string to_string(const T& x,
+                      std::string& indents = TO_STRING::emptyString);
 
-template <typename... T>
-std::string to_string(const std::pair<T...> &p,
-                      std::string &indents = TO_STRING::emptyString);
+template<typename... T>
+std::string to_string(const std::pair<T...>& p,
+                      std::string& indents = TO_STRING::emptyString);
 
-template <typename T, size_t size>
-std::string to_string(const std::array<T, size> &,
-                      std::string &indents = TO_STRING::emptyString);
+template<typename T, size_t size>
+std::string to_string(const std::array<T, size>&,
+                      std::string& indents = TO_STRING::emptyString);
 
-template <typename T, typename Container = std::deque<T>>
-std::string to_string(std::stack<T, Container> x, std::string &indents = TO_STRING::emptyString);
+template<typename T, typename Container = std::deque<T>>
+std::string to_string(std::stack<T, Container> x, std::string& indents = TO_STRING::emptyString);
 
-template <typename T, typename Container = std::deque<T>>
-std::string to_string(std::queue<T, Container> x, std::string &indents = TO_STRING::emptyString);
+template<typename T, typename Container = std::deque<T>>
+std::string to_string(std::queue<T, Container> x, std::string& indents = TO_STRING::emptyString);
 
-template <template <typename...> class T, typename ForwardIt>
+template<template<typename...> class T, typename ForwardIt>
 std::string to_string(ForwardIt first,
                       ForwardIt last,
-                      std::string &indents = TO_STRING::emptyString);
+                      std::string& indents = TO_STRING::emptyString);
 
 #define DeclForwardItContainer(container)           \
     template <typename... T>                        \
@@ -162,8 +162,8 @@ DeclForwardItContainer(std::unordered_multiset);
 DeclForwardItContainer(std::unordered_multimap);
 #undef DeclForwardItContainer
 
-template <typename T>
-std::string to_string(const T &x, std::string &indents)
+template<typename T>
+std::string to_string(const T& x, std::string& indents)
 {
     return indents + std::to_string(x);
 }
@@ -192,9 +192,9 @@ DefForwardItContainer(std::unordered_multiset);
 DefForwardItContainer(std::unordered_multimap);
 #undef DefForwardItContainer
 
-template <typename... T>
-std::string to_string(const std::pair<T...> &p,
-                      std::string &indents)
+template<typename... T>
+std::string to_string(const std::pair<T...>& p,
+                      std::string& indents)
 {
     using namespace TO_STRING;
     std::string result;
@@ -237,8 +237,8 @@ std::string to_string(const std::pair<T...> &p,
     }
 }
 
-template <typename T, size_t size>
-std::string to_string(const std::array<T, size> &arr, std::string &indents)
+template<typename T, size_t size>
+std::string to_string(const std::array<T, size>& arr, std::string& indents)
 {
     using namespace TO_STRING;
     if (arr.cbegin() == arr.cend())
@@ -285,10 +285,10 @@ std::string to_string(const std::array<T, size> &arr, std::string &indents)
     }
 }
 
-template <template <typename...> class T, typename ForwardIt>
+template<template<typename...> class T, typename ForwardIt>
 std::string to_string(ForwardIt first,
                       ForwardIt last,
-                      std::string &indents)
+                      std::string& indents)
 {
     using namespace TO_STRING;
     if (first == last)
@@ -335,8 +335,8 @@ std::string to_string(ForwardIt first,
     }
 }
 
-template <typename T, typename Container>
-std::string to_string(std::stack<T, Container> x, std::string &indents)
+template<typename T, typename Container>
+std::string to_string(std::stack<T, Container> x, std::string& indents)
 {
     std::deque<T> container;
     while (!x.empty())
@@ -347,8 +347,8 @@ std::string to_string(std::stack<T, Container> x, std::string &indents)
     return to_string<std::stack, typename std::deque<T>::iterator>(container.begin(), container.end(), indents);
 }
 
-template <typename T, typename Container>
-std::string to_string(std::queue<T, Container> x, std::string &indents)
+template<typename T, typename Container>
+std::string to_string(std::queue<T, Container> x, std::string& indents)
 {
     std::deque<T> container;
     while (!x.empty())

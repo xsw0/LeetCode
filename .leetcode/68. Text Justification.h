@@ -1,11 +1,11 @@
 class Solution
 {
 public:
-    vector<string> fullJustify(vector<string> &words, int maxWidth)
+    vector <string> fullJustify(vector <string>& words, int maxWidth)
     {
         size_t width = maxWidth;
 
-        vector<string> result;
+        vector <string> result;
         result.reserve(words.size());
 
         result.emplace_back();

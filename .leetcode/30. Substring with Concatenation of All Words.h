@@ -1,7 +1,7 @@
 class Solution
 {
 public:
-    vector<int> findSubstring(string s, vector <string> &words)
+    vector<int> findSubstring(string s, vector <string>& words)
     {
         auto length = words.front().size();
         if (s.size() < length * words.size()) return {};
@@ -10,7 +10,7 @@ public:
         for (size_t i = 0; i < length; ++i)
         {
             unordered_map <string, size_t> um;
-            for (auto &str:words)
+            for (auto& str: words)
             {
                 ++um[str];
             }

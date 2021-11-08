@@ -21,7 +21,7 @@ class MyHashMap
 
     std::array<value_type, Prime>::iterator
     find(std::array<value_type, Prime>::iterator first,
-         const std::function<bool(value_type)> &pFunction)
+         const std::function<bool(value_type)>& pFunction)
     {
         auto it = first;
         for (; it < arr.end(); ++it)
@@ -84,7 +84,8 @@ public:
     /** value will always be non-negative. */
     void put(int key, int value)
     {
-        std::function<bool(value_type)> f = [=](value_type n) -> bool {
+        std::function<bool(value_type)> f = [=](value_type n) -> bool
+        {
             return key_equal(n.first, NullFlag) || key_equal(n.first, key);
         };
         auto it = find(arr.begin() + hasher(key), f);
@@ -95,7 +96,8 @@ public:
     /** Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key */
     int get(int key)
     {
-        std::function<bool(value_type)> f = [=](value_type n) -> bool {
+        std::function<bool(value_type)> f = [=](value_type n) -> bool
+        {
             return key_equal(n.first, NullFlag) || key_equal(n.first, key);
         };
         auto it = find(arr.begin() + hasher(key), f);
@@ -105,7 +107,8 @@ public:
     /** Removes the mapping of the specified value key if this map contains a mapping for the key */
     void remove(int key)
     {
-        std::function<bool(value_type)> f = [=](value_type n) -> bool {
+        std::function<bool(value_type)> f = [=](value_type n) -> bool
+        {
             return key_equal(n.first, NullFlag) || key_equal(n.first, key);
         };
         auto it = find(arr.begin() + hasher(key), f);

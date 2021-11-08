@@ -1,11 +1,12 @@
 class Solution
 {
 public:
-    int search(vector<int> &nums, int target)
+    int search(vector<int>& nums, int target)
     {
         if (nums.empty()) return -1;
 
-        auto offset = [](const vector<int> &nums) {
+        auto offset = [](const vector<int>& nums)
+        {
             size_t l = 0;
             size_t r = nums.size();
             while (l != r)

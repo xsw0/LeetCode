@@ -11,12 +11,12 @@
 class Solution
 {
 public:
-    ListNode *mergeKLists(vector<ListNode *> &lists)
+    ListNode* mergeKLists(vector<ListNode*>& lists)
     {
         vector<int> v;
         v.reserve(min(static_cast<size_t>(10000),
                       lists.size() * static_cast<size_t>(500)));
-        for (auto list : lists)
+        for (auto list: lists)
         {
             while (list)
             {
@@ -26,8 +26,8 @@ public:
         }
         sort(v.begin(), v.end());
         ListNode node;
-        ListNode *preHead = &node;
-        for (const auto i : v)
+        ListNode* preHead = &node;
+        for (const auto i: v)
         {
             preHead->next = new ListNode(i);
             preHead = preHead->next;

@@ -11,7 +11,7 @@
 class Solution
 {
 public:
-    ListNode *swapPairs(ListNode *head)
+    ListNode* swapPairs(ListNode* head)
     {
         ListNode node;
         node.next = head;

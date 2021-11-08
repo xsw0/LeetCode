@@ -1,13 +1,14 @@
 class Solution
 {
 public:
-    vector <vector<int>> insert(vector <vector<int>> &intervals, vector<int> &newInterval)
+    vector <vector<int>> insert(vector <vector<int>>& intervals, vector<int>& newInterval)
     {
         auto l = lower_bound(
             intervals.begin(),
             intervals.end(),
             newInterval.front(),
-            [](const vector<int> &element, int value) {
+            [](const vector<int>& element, int value)
+            {
                 return element.back() < value;
             });
 
@@ -21,7 +22,8 @@ public:
             l,
             intervals.end(),
             newInterval.back(),
-            [](int value, const vector<int> &element) {
+            [](int value, const vector<int>& element)
+            {
                 return value < element.front();
             });
 

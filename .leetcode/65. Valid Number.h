@@ -4,7 +4,8 @@ public:
     bool isNumber(string s)
     {
         auto current = s.cbegin();
-        auto digits = [&]() {
+        auto digits = [&]()
+        {
             if (*current >= '0' && *current <= '9')
             {
                 do ++current; while (*current >= '0' && *current <= '9');
@@ -15,7 +16,8 @@ public:
                 return false;
             }
         };
-        auto integer = [&]() {
+        auto integer = [&]()
+        {
             auto start = current;
             if (*current == '+' || *current == '-') ++current;
             if (digits())
@@ -28,7 +30,8 @@ public:
                 return false;
             }
         };
-        auto decimal = [&]() {
+        auto decimal = [&]()
+        {
             auto start = current;
             if (*current == '+' || *current == '-') ++current;
             if (digits())
@@ -53,7 +56,8 @@ public:
                 return false;
             }
         };
-        auto valid = [&]() {
+        auto valid = [&]()
+        {
             auto start = current;
             if (!decimal()) return false;
             if (*current == 'e' || *current == 'E')

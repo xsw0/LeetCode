@@ -1,7 +1,7 @@
 class Solution
 {
 public:
-    int maxArea(vector<int> &height)
+    int maxArea(vector<int>& height)
     {
         int max = 0;
         size_t i = 0;

@@ -1,8 +1,8 @@
 class Solution
 {
     static bool match(
-        const char *sFirst, const char *sLast,
-        const char *pFirst, const char *pLast)
+        const char* sFirst, const char* sLast,
+        const char* pFirst, const char* pLast)
     {
         if (sFirst == sLast && pFirst == pLast) return true;
 

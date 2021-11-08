@@ -26,10 +26,10 @@ class Solution
         }
     }
 public:
-    vector <vector<int>> combinationSum2(vector<int> &candidates, int target)
+    vector <vector<int>> combinationSum2(vector<int>& candidates, int target)
     {
         map<int, int, greater<>> m;
-        for (auto n : candidates) ++m[n];
+        for (auto n: candidates) ++m[n];
         end = m.cend();
         helper(m.cbegin(), target);
         return result;

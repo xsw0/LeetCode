@@ -5,7 +5,7 @@ public:
     {
         if (t.size() > s.size()) return "";
         array<int, 'z' - 'A' + 1> count{};
-        for (auto c : t) --count[c - 'A'];
+        for (auto c: t) --count[c - 'A'];
 
         int match = t.size();
 

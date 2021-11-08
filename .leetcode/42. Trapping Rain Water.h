@@ -1,7 +1,7 @@
 class Solution
 {
 public:
-    int trap(vector<int> &height)
+    int trap(vector<int>& height)
     {
         auto l = height.cbegin();
         auto r = height.cend();

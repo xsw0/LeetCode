@@ -69,7 +69,8 @@ public:
 
     void add(int key)
     {
-        std::function<bool(int)> f = [=](int n) -> bool {
+        std::function<bool(int)> f = [=](int n) -> bool
+        {
             return n == NullFlag || n == key;
         };
         auto it = find(arr.begin() + key % Prime, f);
@@ -79,7 +80,8 @@ public:
 
     void remove(int key)
     {
-        std::function<bool(int)> f = [=](int n) -> bool {
+        std::function<bool(int)> f = [=](int n) -> bool
+        {
             return n == NullFlag || n == key;
         };
         auto it = find(arr.begin() + key % Prime, f);
@@ -97,7 +99,8 @@ public:
     /** Returns true if this set contains the specified element */
     bool contains(int key)
     {
-        std::function<bool(int)> f = [=](int n) -> bool {
+        std::function<bool(int)> f = [=](int n) -> bool
+        {
             return n == NullFlag || n == key;
         };
         auto it = find(arr.begin() + key % Prime, f);

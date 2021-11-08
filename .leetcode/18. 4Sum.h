@@ -1,7 +1,7 @@
 class Solution
 {
 public:
-    vector <vector<int>> fourSum(vector<int> &nums, int target)
+    vector <vector<int>> fourSum(vector<int>& nums, int target)
     {
         if (nums.size() < 4) return {};
         sort(nums.begin(), nums.end());

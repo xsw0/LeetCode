@@ -1,7 +1,7 @@
 class Solution
 {
 public:
-    int search(vector<int> &nums, int target)
+    int search(vector<int>& nums, int target)
     {
         size_t left = 0;
         size_t right = nums.size();

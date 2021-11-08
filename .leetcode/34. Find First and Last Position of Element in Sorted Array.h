@@ -1,7 +1,7 @@
 class Solution
 {
 public:
-    vector<int> searchRange(vector<int> &nums, int target)
+    vector<int> searchRange(vector<int>& nums, int target)
     {
         auto l = nums.cbegin();
         auto r = nums.cend();

@@ -5,7 +5,8 @@ public:
     {
         string product(num1.size() + num2.size(), '0');
         function<void(size_t, int)> carry =
-            [&](size_t index, int value) {
+            [&](size_t index, int value)
+            {
                 int sum = product[index] - '0' + value;
                 product[index] = '0' + sum % 10;
                 if (sum >= 10)

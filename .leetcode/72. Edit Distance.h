@@ -3,12 +3,12 @@ class Solution
 public:
     int minDistance(string word1, string word2)
     {
-        const string &shorter = word1.size() <= word2.size() ? word1 : word2;
-        const string &longer = word1.size() > word2.size() ? word1 : word2;
+        const string& shorter = word1.size() <= word2.size() ? word1 : word2;
+        const string& longer = word1.size() > word2.size() ? word1 : word2;
 
         if (shorter.empty()) return longer.size();
 
-        vector<size_t> dp;
+        vector <size_t> dp;
         dp.reserve(shorter.size());
         for (size_t i = 1; i <= shorter.size(); ++i) dp.emplace_back(i);
         for (size_t i = 0; i < longer.size(); ++i)

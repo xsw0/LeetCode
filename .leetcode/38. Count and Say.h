@@ -3,11 +3,12 @@ class Solution
 public:
     string countAndSay(int n)
     {
-        auto f = [=](const string &s) {
+        auto f = [=](const string& s)
+        {
             string result;
             char say = s.front();
             int count = 0;
-            for (auto c : s)
+            for (auto c: s)
             {
                 if (c == say)
                 {

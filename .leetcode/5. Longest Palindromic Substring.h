@@ -5,25 +5,29 @@ public:
     {
         if (s.empty()) return s;
 
-        auto extendL = [&](size_t index) {
+        auto extendL = [&](size_t index)
+        {
             --index;
             auto l = index;
             while (l != 0 && s[l - 1] == s[index]) --l;
             return l;
         };
 
-        auto extendR = [&](size_t index) {
+        auto extendR = [&](size_t index)
+        {
             auto r = index + 1;
             while (s[r] == s[index]) ++r;
             return r;
         };
 
-        auto extendBoth = [&](size_t l, size_t r) -> pair<size_t, size_t> {
+        auto extendBoth = [&](size_t l, size_t r) -> pair <size_t, size_t>
+        {
             while (l != 0 && s[l - 1] == s[r]) --l, ++r;
             return { l, r };
         };
 
-        auto size = [](size_t l, size_t r) {
+        auto size = [](size_t l, size_t r)
+        {
             return r - l;
         };
 

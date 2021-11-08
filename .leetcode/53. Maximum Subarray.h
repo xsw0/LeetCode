@@ -1,11 +1,11 @@
 class Solution
 {
 public:
-    int maxSubArray(vector<int> &nums)
+    int maxSubArray(vector<int>& nums)
     {
         int sum = 0;
         int max = numeric_limits<int>::min();
-        for (auto n : nums)
+        for (auto n: nums)
         {
             sum += n;
             max = std::max(max, sum);

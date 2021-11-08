@@ -10,14 +10,14 @@
  */
 class Solution
 {
-    inline ListNode *kth(ListNode *head, int k)
+    inline ListNode* kth(ListNode* head, int k)
     {
         return k > 0 && head ? kth(head->next, k - 1) : head;
     };
 
-    inline ListNode *reverse(ListNode *head)
+    inline ListNode* reverse(ListNode* head)
     {
-        ListNode *tail = nullptr;
+        ListNode* tail = nullptr;
         while (head)
         {
             auto next = head->next;
@@ -29,10 +29,10 @@ class Solution
     };
 
 public:
-    ListNode *reverseKGroup(ListNode *head, int k)
+    ListNode* reverseKGroup(ListNode* head, int k)
     {
         ListNode _preHead{ 0, head };
-        ListNode *preHead = &_preHead;
+        ListNode* preHead = &_preHead;
         auto preFirst = preHead;
 
         auto tail = kth(preFirst, k);
