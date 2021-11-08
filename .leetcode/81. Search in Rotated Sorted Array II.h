@@ -1,45 +1,32 @@
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
 class Solution
 {
 public:
-    ListNode* deleteDuplicates(ListNode* head)
+    bool search(vector<int>& nums, int target)
     {
-        if (!head) return nullptr;
+        size_t l = 0;
+        size_t r = nums.size();
 
-        ListNode node(0, head);
-        ListNode* p0 = &node;
-
-        while (p0->next)
+        while (l < r)
         {
-            auto p1 = p0->next;
-            if (p1)
+            size_t mid = l + (r - l) / 2;
+            if (nums[mid] == target) return true;
+            if (nums[l] < nums[mid])
             {
-                auto p2 = p1->next;
-                if (p2 && p2->val == p1->val)
-                {
-                    do
-                    {
-                        p1->next = p2->next;
-//                        free(p2);
-                        p2 = p1->next;
-                    } while (p2 && p2->val == p1->val);
-//                    free(p1);
-                    p0->next = p2;
-                    p1 = p0;
-                }
+                if (target >= nums[l] && target < nums[mid]) r = mid;
+                else l = mid + 1;
             }
-            p0 = p1;
+            else if (nums[mid] < nums[r - 1])
+            {
+                if (target > nums[mid] && target <= nums[r - 1])l = mid + 1;
+                else r = mid;
+            }
+            else
+            {
+                while (l != r && nums[l] == nums[mid]) ++l;
+                while (l != r && nums[r - 1] == nums[mid]) --r;
+            }
         }
 
-        return node.next;
+        return false;
     }
 };
