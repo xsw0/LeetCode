@@ -2,17 +2,17 @@
 
 using namespace std;
 
-#include ".leetcode/79. Word Search.h"
+#include ".leetcode/80. Remove Duplicates from Sorted Array II.h"
 
 int main()
 {
     Solution solution;
 
-    auto arg1 = vector<vector<char>>{};
+    auto arg1 = vector<int>{ 1, 1, 1, 2, 2, 3 };
     auto arg2 = "";
 
     cout <<
-         solution.exist(arg1, arg2)
+         solution.removeDuplicates(arg1)
          << endl;
     return 0;
 }
