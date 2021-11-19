@@ -3,4 +3,4 @@ project(LeetCode)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(LeetCode main.cpp)
+add_executable(LeetCode main.cpp TreeNode.h)
