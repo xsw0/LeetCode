@@ -4,21 +4,26 @@
 
 using namespace std;
 
-#include ".leetcode/84. Largest Rectangle in Histogram.h"
+#include ".leetcode/91. Decode Ways.h"
 
 int main()
 {
     Solution solution;
 
-    auto arg1 = vector<int>{ 4, 2, 0, 3, 2, 4, 3, 4 };
-    auto arg2 = 2;
+    auto arg1 = "111111111111111111111111111111111111111111111";
+    auto arg2 = "sre";
 
-    ListNode* ld = ListNode::pListNode(arg1.begin(), arg1.end());
+//    ListNode* ld = ListNode::pListNode(arg1.begin(), arg1.end());
 
-    cout <<
-         solution.largestRectangleArea(
-             arg1
-         )
-         << endl;
+    auto result = solution.numDecodings(
+        arg1
+    );
+
+    cout << result << endl;
+//    for (auto& v: result)
+//    {
+//        for (auto i: v) cout << i << " ";
+//        cout << "\n";
+//    }
     return 0;
 }
