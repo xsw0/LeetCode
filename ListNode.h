@@ -5,6 +5,7 @@
 #ifndef LEETCODE__LISTNODE_H_
 #define LEETCODE__LISTNODE_H_
 
+
 class ListNode
 {
 public:
@@ -33,5 +34,6 @@ inline std::ostream& operator<<(std::ostream& os, ListNode* ld)
     if (ld->next) os << ' ' << ld->next;
     return os;
 }
+
 
 #endif //LEETCODE__LISTNODE_H_

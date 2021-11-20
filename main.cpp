@@ -2,25 +2,30 @@
 
 #include "ListNode.h"
 #include "TreeNode.h"
+#include "Node.h"
 
 using namespace std;
 
-#include ".leetcode/94. Binary Tree Inorder Traversal.h"
+#include ".leetcode/138. Copy List with Random Pointer.h"
 
 int main()
 {
     Solution solution;
 
-    auto arg1 = "111111111111111111111111111111111111111111111";
-    auto arg2 = "sre";
+    auto arg1 = vector<int>{ 3, 9, 20, 15, 7 };
+    auto arg2 = vector<int>{ 9, 3, 15, 20, 7 };
 
-//    ListNode* ld = ListNode::pListNode(arg1.begin(), arg1.end());
+//    ListNode* l = ListNode::pListNode(arg1.begin(), arg1.end());
+//    TreeNode* tree = new TreeNode(1,
+//                                  nullptr,
+//                                  new TreeNode(2, new TreeNode(3)));
+//    auto result = solution.numDecodings(
+//        arg1
+//    );
 
-    auto result = solution.numDecodings(
-        arg1
-    );
+//    solution.buildTree(arg1, arg2);
 
-    cout << result << endl;
+//    cout << result << endl;
 //    for (auto& v: result)
 //    {
 //        for (auto i: v) cout << i << " ";
