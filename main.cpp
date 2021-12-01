@@ -6,7 +6,7 @@
 
 using namespace std;
 
-#include ".leetcode/994. Rotting Oranges.h"
+#include ".leetcode/114. Flatten Binary Tree to Linked List.h"
 
 int main()
 {
@@ -16,12 +16,17 @@ int main()
     auto arg2 = vector<int>{ 9, 3, 15, 20, 7 };
 
 //    ListNode* l = ListNode::pListNode(arg1.begin(), arg1.end());
-//    TreeNode* tree = new TreeNode(1,
-//                                  nullptr,
-//                                  new TreeNode(2, new TreeNode(3)));
-//    auto result = solution.numDecodings(
-//        arg1
-//    );
+    TreeNode* tree = new TreeNode{
+        1,
+        new TreeNode{
+            2, new TreeNode{ 3 }, new TreeNode{ 4 }},
+        new TreeNode{
+            5, nullptr, new TreeNode{ 6 }}
+    };
+//    auto result =
+    solution.flatten(
+        tree
+    );
 
 //    solution.buildTree(arg1, arg2);
 
