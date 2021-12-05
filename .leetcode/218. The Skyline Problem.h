@@ -1,101 +1,75 @@
 class Solution
 {
-    struct Building
-    {
-        int left;
-        int right;
-        int height;
-
-        Building(const vector<int>& v) : left{ v[0] }, right{ v[1] }, height{ v[2] } {}
-
-        bool operator<(const Building& rhs) const
-        {
-            return height < rhs.height ||
-                   (height == rhs.height && right < rhs.right);
-        }
-    };
-
 public:
     vector<vector<int>> getSkyline(vector<vector<int>>& buildings)
     {
-        vector<vector<int>> result{{ buildings.front().front(), 0 }};
-
-        priority_queue<Building> pq;
-
-        int right = 0;
-
-        for (Building build: buildings)
+        map<int, int> height{{ numeric_limits<int>::min(), 0 }};
+        for (auto& building: buildings)
         {
-            while (!pq.empty() && pq.top().right <= build.left)
+            auto r = height.lower_bound(building[1]);
+            if (r == height.end() || r->first != building[1])
             {
-                if (pq.top().right > result.back().front())
+                assert(r != height.begin());
+                r = height.insert(r, { building[1], prev(r)->second });
+            }
+
+            auto l = height.lower_bound(building[0]);
+            if (l == height.end() || l->first != building[0])
+            {
+                assert(l != height.begin());
+                l = height.insert(l, { building[0], prev(l)->second });
+            }
+
+            auto it = l;
+            while (it != r)
+            {
+                if (it->second < building[2])
                 {
-                    if (pq.top().height > result.back().back())
+                    if (it != height.begin() && prev(it)->second == building[2])
                     {
-                        if (result.size() > 1 && result[result.size() - 2].back() == pq.top().height)
+                        if (it == l)
                         {
-                            result.pop_back();
+                            l = it = height.erase(it);
                         }
                         else
                         {
-                            result.back().back() = pq.top().height;
+                            it = height.erase(it);
                         }
-                    }
-                    if (pq.top().height == result.back().back())
-                    {
-                        result.push_back({ pq.top().right, 0 });
-                    }
-                }
-                pq.pop();
-            }
-
-            if (pq.empty() || build.height > pq.top().height)
-            {
-                if (build.left == result.back().front())
-                {
-                    if (result.size() > 1 && result[result.size() - 2].back() == build.height)
-                    {
-                        result.pop_back();
                     }
                     else
                     {
-                        result.back().back() = build.height;
+                        it->second = building[2];
+                        ++it;
                     }
                 }
                 else
                 {
-                    result.push_back({ build.left, build.height });
+                    ++it;
                 }
             }
 
-            pq.push(build);
-        }
-
-        while (!pq.empty())
-        {
-            if (pq.top().right > result.back().front())
+            if (r != height.end() && r->second == building[2])
             {
-                if (pq.top().height > result.back().back())
-                {
-                    if (result.size() > 1 && result[result.size() - 2].back() == pq.top().height)
-                    {
-                        result.pop_back();
-                    }
-                    else
-                    {
-                        result.back().back() = pq.top().height;
-                    }
-                }
-                if (pq.top().height == result.back().back())
-                {
-                    result.push_back({ pq.top().right, 0 });
-                }
+                assert(l != r);
+                height.erase(r);
             }
-            pq.pop();
+            assert(l != height.end());
+            if (l != height.begin() && l->second == prev(l)->second)
+            {
+                height.erase(l);
+            }
         }
+        if (height.begin()->second == 0) { height.erase(height.begin()); }
 
+        vector<vector<int>> result;
+        result.reserve(height.size());
+        for (auto p: height)
+        {
+            if (result.empty() || result.back().back() != p.second)
+            {
+                result.emplace_back(vector<int>{ p.first, p.second });
+            }
+        }
         return result;
     }
 };
-
-

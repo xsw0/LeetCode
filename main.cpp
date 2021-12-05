@@ -6,13 +6,16 @@
 
 using namespace std;
 
-#include ".leetcode/114. Flatten Binary Tree to Linked List.h"
+#include ".leetcode/218. The Skyline Problem.h"
 
 int main()
 {
     Solution solution;
 
-    auto arg1 = vector<int>{ 3, 9, 20, 15, 7 };
+    auto arg1 = vector<vector<int>>{
+        { 0, 2, 3 },
+        { 2, 5, 3 },
+    };
     auto arg2 = vector<int>{ 9, 3, 15, 20, 7 };
 
 //    ListNode* l = ListNode::pListNode(arg1.begin(), arg1.end());
@@ -24,8 +27,8 @@ int main()
             5, nullptr, new TreeNode{ 6 }}
     };
 //    auto result =
-    solution.flatten(
-        tree
+    solution.getSkyline(
+        arg1
     );
 
 //    solution.buildTree(arg1, arg2);
