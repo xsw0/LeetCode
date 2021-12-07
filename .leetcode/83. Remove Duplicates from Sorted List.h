@@ -21,7 +21,7 @@ public:
             if (next->val == p->val)
             {
                 p->next = next->next;
-//                free(next);
+                delete next;
             }
             else { p = p->next; }
         }

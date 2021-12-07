@@ -29,10 +29,10 @@ public:
                     do
                     {
                         p1->next = p2->next;
-//                        free(p2);
+                        delete p2;
                         p2 = p1->next;
                     } while (p2 && p2->val == p1->val);
-//                    free(p1);
+                    delete p1;
                     p0->next = p2;
                     p1 = p0;
                 }
