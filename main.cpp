@@ -6,17 +6,14 @@
 
 using namespace std;
 
-#include ".leetcode/136. Single Number.h"
+#include ".leetcode/125. Valid Palindrome.h"
 
 int main()
 {
     Solution solution;
 
-    auto arg1 = vector<vector<int>>{
-        { 0, 2, 3 },
-        { 2, 5, 3 },
-    };
-    auto arg2 = vector<int>{ 9, 3, 15, 20, 7 };
+    auto arg1 = vector<int>{{ 4, 3, 2, 7, 8, 2, 3, 1 }};
+//    auto arg2 = vector<int>{ 9, 3, 15, 20, 7 };
 
 //    ListNode* l = ListNode::pListNode(arg1.begin(), arg1.end());
     TreeNode* tree = new TreeNode{
@@ -27,7 +24,7 @@ int main()
             5, nullptr, new TreeNode{ 6 }}
     };
 //    auto result =
-    solution.getSkyline(
+    solution.findDisappearedNumbers(
         arg1
     );
 

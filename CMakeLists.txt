@@ -112,4 +112,4 @@ add_executable(
         ".leetcode/704. Binary Search.h"
         ".leetcode/705. Design HashSet.h"
         ".leetcode/706. Design HashMap.h"
-        ".leetcode/994. Rotting Oranges.h" ".leetcode/136. Single Number.h" ".leetcode/141. Linked List Cycle.h")
+        ".leetcode/994. Rotting Oranges.h" ".leetcode/136. Single Number.h" ".leetcode/141. Linked List Cycle.h" ".leetcode/155. Min Stack.h" ".leetcode/160. Intersection of Two Linked Lists.h" ".leetcode/169. Majority Element.h" ".leetcode/206. Reverse Linked List.h" ".leetcode/226. Invert Binary Tree.h" ".leetcode/234. Palindrome Linked List.h" ".leetcode/283. Move Zeroes.h" ".leetcode/448. Find All Numbers Disappeared in an Array.h" ".leetcode/543. Diameter of Binary Tree.h" ".leetcode/617. Merge Two Binary Trees.h" ".leetcode/108. Convert Sorted Array to Binary Search Tree.h" ".leetcode/118. Pascal's Triangle.h" ".leetcode/125. Valid Palindrome.h")
