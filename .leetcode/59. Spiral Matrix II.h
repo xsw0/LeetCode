@@ -24,9 +24,9 @@
 class Solution
 {
 public:
-    vector <vector<int>> generateMatrix(int n)
+    vector<vector<int>> generateMatrix(int n)
     {
-        static const array <vector<vector < int>>, 21 > arr{
+        static const array<vector<vector<int>>, 21> arr{
             {
                 {},
                 {{ 1 }},

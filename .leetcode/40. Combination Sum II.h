@@ -1,6 +1,6 @@
 class Solution
 {
-    vector <vector<int>> result;
+    vector<vector<int>> result;
     vector<int> cache;
     map<int, int>::const_iterator end;
     void helper(map<int, int>::const_iterator it, int target)
@@ -26,7 +26,7 @@ class Solution
         }
     }
 public:
-    vector <vector<int>> combinationSum2(vector<int>& candidates, int target)
+    vector<vector<int>> combinationSum2(vector<int>& candidates, int target)
     {
         map<int, int, greater<>> m;
         for (auto n: candidates) ++m[n];

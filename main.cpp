@@ -6,7 +6,7 @@
 
 using namespace std;
 
-#include ".leetcode/218. The Skyline Problem.h"
+#include "header.h"
 
 int main()
 {

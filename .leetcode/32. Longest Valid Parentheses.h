@@ -5,7 +5,7 @@ public:
     {
         size_t start = 0;
         size_t longest = 0;
-        stack <size_t> st;
+        stack<size_t> st;
         for (size_t i = 0; i < s.size(); i++)
         {
             switch (s[i])

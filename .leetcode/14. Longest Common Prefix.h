@@ -1,7 +1,7 @@
 class Solution
 {
 public:
-    string longestCommonPrefix(vector <string>& strs)
+    string longestCommonPrefix(vector<string>& strs)
     {
         if (strs.empty()) return "";
         size_t size = numeric_limits<size_t>::max();

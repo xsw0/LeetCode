@@ -1,7 +1,7 @@
 class Solution
 {
 public:
-    void setZeroes(vector <vector<int>>& matrix)
+    void setZeroes(vector<vector<int>>& matrix)
     {
         bool col0 = find_if(matrix.cbegin(), matrix.cend(),
                             [](const vector<int>& v)

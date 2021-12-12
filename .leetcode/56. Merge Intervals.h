@@ -1,10 +1,10 @@
 class Solution
 {
 public:
-    vector <vector<int>> merge(vector <vector<int>>& intervals)
+    vector<vector<int>> merge(vector<vector<int>>& intervals)
     {
         sort(intervals.begin(), intervals.end());
-        vector <vector<int>> result;
+        vector<vector<int>> result;
         result.reserve(intervals.size());
         result.push_back(intervals.front());
         for (auto it = next(intervals.cbegin()); it != intervals.cend(); ++it)

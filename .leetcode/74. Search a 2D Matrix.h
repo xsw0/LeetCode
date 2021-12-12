@@ -1,7 +1,7 @@
 class Solution
 {
 public:
-    bool searchMatrix(vector <vector<int>>& matrix, int target)
+    bool searchMatrix(vector<vector<int>>& matrix, int target)
     {
         size_t l = 0;
         size_t r = matrix.size() * matrix.front().size();

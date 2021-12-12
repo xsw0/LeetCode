@@ -20,7 +20,7 @@ public:
             return r;
         };
 
-        auto extendBoth = [&](size_t l, size_t r) -> pair <size_t, size_t>
+        auto extendBoth = [&](size_t l, size_t r) -> pair<size_t, size_t>
         {
             while (l != 0 && s[l - 1] == s[r]) --l, ++r;
             return { l, r };

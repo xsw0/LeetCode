@@ -12,7 +12,7 @@ public:
             while (*current != '\0' && *current != '/') ++current;
             return start != current;
         };
-        list <string_view> l;
+        list<string_view> l;
         while (entry())
         {
             size_t size = current - start;

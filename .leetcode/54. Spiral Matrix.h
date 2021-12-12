@@ -1,7 +1,7 @@
 class Solution
 {
 public:
-    vector<int> spiralOrder(vector <vector<int>>& matrix)
+    vector<int> spiralOrder(vector<vector<int>>& matrix)
     {
         size_t height = matrix.size();
         size_t width = matrix.front().size();

@@ -1,9 +1,9 @@
 class Solution
 {
 public:
-    vector <vector<int>> subsets(vector<int>& nums)
+    vector<vector<int>> subsets(vector<int>& nums)
     {
-        vector <vector<int>> result = {{}};
+        vector<vector<int>> result = {{}};
         size_t size = 1;
         for (auto n: nums)
         {

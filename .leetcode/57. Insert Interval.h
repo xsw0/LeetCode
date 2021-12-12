@@ -1,7 +1,7 @@
 class Solution
 {
 public:
-    vector <vector<int>> insert(vector <vector<int>>& intervals, vector<int>& newInterval)
+    vector<vector<int>> insert(vector<vector<int>>& intervals, vector<int>& newInterval)
     {
         auto l = lower_bound(
             intervals.begin(),
@@ -44,7 +44,7 @@ public:
             return intervals;
         }
 
-        vector <vector<int>> result;
+        vector<vector<int>> result;
         result.reserve(intervals.size() + l - r + 1);
 
         std::move(intervals.begin(), l, back_inserter(result));

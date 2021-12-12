@@ -1,9 +1,9 @@
 class Solution
 {
 public:
-    vector <string> generateParenthesis(int n)
+    vector<string> generateParenthesis(int n)
     {
-        vector <string> result;
+        vector<string> result;
         std::function<void(string, int, int)> f =
             [&](string s, int l, int r)
             {

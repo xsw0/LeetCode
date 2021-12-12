@@ -3,7 +3,7 @@
 class Solution
 {
 public:
-    bool exist(vector <vector<char>>& board, string word)
+    bool exist(vector<vector<char>>& board, string word)
     {
         auto m = board.size();
         auto n = board.front().size();
@@ -22,7 +22,7 @@ public:
 private:
     struct Dfs
     {
-        vector <vector<char>>& board;
+        vector<vector<char>>& board;
         string& word;
         size_t m;
         size_t n;

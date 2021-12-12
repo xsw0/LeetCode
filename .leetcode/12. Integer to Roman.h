@@ -3,7 +3,7 @@ class Solution
 public:
     string intToRoman(int num)
     {
-        static const vector <string>
+        static const vector<string>
             I = { "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" },
             X = { "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC" },
             C = { "", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM" },

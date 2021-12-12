@@ -1,7 +1,7 @@
 class Solution
 {
 public:
-    int uniquePathsWithObstacles(vector <vector<int>>& obstacleGrid)
+    int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid)
     {
         auto m = obstacleGrid.size();
         auto n = obstacleGrid.front().size();

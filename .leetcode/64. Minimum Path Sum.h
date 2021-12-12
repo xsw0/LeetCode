@@ -1,7 +1,7 @@
 class Solution
 {
 public:
-    int minPathSum(vector <vector<int>>& grid)
+    int minPathSum(vector<vector<int>>& grid)
     {
         size_t m = grid.size();
         size_t n = grid.front().size();

@@ -1,6 +1,6 @@
 class Solution
 {
-    vector <vector<int>> result;
+    vector<vector<int>> result;
     vector<int> cache;
     vector<int>::const_reverse_iterator end;
     void helper(vector<int>::const_reverse_iterator it, int target)
@@ -21,7 +21,7 @@ class Solution
         }
     }
 public:
-    vector <vector<int>> combinationSum(vector<int>& candidates, int target)
+    vector<vector<int>> combinationSum(vector<int>& candidates, int target)
     {
         sort(candidates.begin(), candidates.end());
         end = candidates.crend();

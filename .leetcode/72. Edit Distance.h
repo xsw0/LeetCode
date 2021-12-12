@@ -8,7 +8,7 @@ public:
 
         if (shorter.empty()) return longer.size();
 
-        vector <size_t> dp;
+        vector<size_t> dp;
         dp.reserve(shorter.size());
         for (size_t i = 1; i <= shorter.size(); ++i) dp.emplace_back(i);
         for (size_t i = 0; i < longer.size(); ++i)

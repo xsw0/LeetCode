@@ -1,7 +1,7 @@
 class Solution
 {
 public:
-    void rotate(vector <vector<int>>& matrix)
+    void rotate(vector<vector<int>>& matrix)
     {
         reverse(matrix.begin(), matrix.end());
         for (size_t i = 0; i < matrix.size(); ++i)

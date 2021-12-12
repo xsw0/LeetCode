@@ -1,7 +1,7 @@
 class Solution
 {
 public:
-    vector <vector<int>> permute(vector<int>& nums)
+    vector<vector<int>> permute(vector<int>& nums)
     {
         constexpr static array<size_t, 21> size = []
         {
@@ -12,7 +12,7 @@ public:
             }
             return result;
         }();
-        vector <vector<int>> result;
+        vector<vector<int>> result;
         result.reserve(size[nums.size()]);
         result.push_back(nums);
         for (size_t i = 1; i < size[nums.size()]; i++)
