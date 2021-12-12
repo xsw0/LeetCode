@@ -112,5 +112,4 @@ add_executable(
         ".leetcode/704. Binary Search.h"
         ".leetcode/705. Design HashSet.h"
         ".leetcode/706. Design HashMap.h"
-        ".leetcode/994. Rotting Oranges.h"
-        header.h)
+        ".leetcode/994. Rotting Oranges.h" ".leetcode/136. Single Number.h" ".leetcode/141. Linked List Cycle.h")
